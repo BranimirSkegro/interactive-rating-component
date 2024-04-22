@@ -3,7 +3,7 @@ const submitBtn = document.getElementById("submit-btn");
 const ratingContainer = document.getElementsByClassName('rating-state-container')[0];
 const thankYouContainer = document.getElementsByClassName('thank-you-state-container')[0];
 const selectedRate = document.getElementsByClassName("your-selection")[0];
-let selectedInput;
+let selectedInput = null;
 
 for (let i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("click", function () {
@@ -11,6 +11,13 @@ for (let i = 0; i < inputs.length; i++) {
   });
 }
 
+submitBtn.addEventListener("click", function () {
+  if (selectedInput)
+    giveFeedback(selectedInput);
+  else
+    alert("Please select a rating before submitting.");
+
+});
 
 function giveFeedback(clickedInputId) {
   const clickedInput = document.getElementById(clickedInputId);
@@ -20,7 +27,3 @@ function giveFeedback(clickedInputId) {
     selectedRate.innerText = `You selected ${clickedInput.value} out of 5`;
   }
 }
-
-submitBtn.addEventListener("click", function () {
-  giveFeedback(selectedInput);
-});
