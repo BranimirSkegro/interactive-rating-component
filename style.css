@@ -178,6 +178,10 @@ p {
   display: none;
 }
 
+.label {
+  display:none
+}
+
 @media(max-width:455px) {
   .state-container {
     margin : 0 20px;
