@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+  /* Colors */
+  /* Primary */
+
+  --orange: hsl(25, 97%, 53%);
+
+  /* Neutral */
+
+  --white         : hsl(0, 0%, 100%);
+  --light-grey    : hsl(217, 12%, 63%);
+  --medium-grey   : hsl(216, 12%, 54%);
+  --dark-blue     : hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+}
+
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size      : 62.5%;
+  overflow-x     : hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size  : 1.5rem;
+  font-family: "Overpass", sans-serif;
+  color      : var(--very-dark-blue);
+
+}
+
+main {
+  width           : 100%;
+  min-height      : 100vh;
+  background-color: var(--very-dark-blue);
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+.state-container {
+  width           : 41.2rem;
+  height          : 41.6rem;
+  border-radius   : 30px;
+  background-color: var(--dark-blue);
+  display         : flex;
+  padding         : 3.3rem;
+}
+
+.rating-state-container {
+  flex-direction : column;
+  justify-content: space-between;
+}
+
+
+
+.star-icon-container {
+  width           : 4.9rem;
+  height          : 4.9rem;
+  border-radius   : 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+h1 {
+  font-size    : 2.88rem;
+  font-weight  : 400;
+  color        : var(--white);
+  margin-bottom: 8px;
+  margin-top   : 10px;
+}
+
+p {
+  font-weight: lighter;
+  color      : var(--light-grey);
+  line-height: 2.4rem;
+}
+
+.buttons-container {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.buttons-container input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border          : 0;
+  width           : 5rem;
+  height          : 5rem;
+  border-radius   : 50%;
+  color           : var(--white);
+  font-size       : 1.5rem;
+  text-align      : center;
+}
+
+.buttons-container input:hover,
+.buttons-container input:focus {
+  background-color: var(--light-grey);
+  transition      : all 0.2s ease-out;
+  cursor          : pointer;
+  outline         : none;
+}
+
+
+.buttons-container input:focus:hover {
+  background-color: var(--orange);
+}
+
+.submit-btn {
+  width           : 100%;
+  border          : none;
+  border-radius   : 50px;
+  padding         : 15px 0;
+  text-transform  : uppercase;
+  letter-spacing  : 3.2px;
+  font-size       : 1.3rem;
+  background-color: var(--orange);
+  color           : var(--white);
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color           : var(--orange);
+  cursor          : pointer;
+}
+
+
+.thank-you-state-container {
+  padding        : 2rem 3.3rem;
+  flex-direction : column;
+  justify-content: space-evenly;
+  align-items    : center;
+}
+
+.your-selection {
+  width           : 19.8rem;
+  height          : 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color           : var(--orange);
+  border-radius   : 20px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+.thank-you-state-container h2 {
+  font-size  : 2.8rem;
+  color      : var(--white);
+  font-weight: 300;
+}
+
+.thank-you-state-container p {
+  text-align: center;
+  padding   : 0 8px;
+}
+
+.back-button {
+  background-color: var(--orange);
+  border          : 0;
+  border-radius   : 50px;
+  width           : 100%;
+  padding         : 1.5rem 1rem;
+  text-transform  : uppercase;
+  color           : var(--white);
+  font-size       : 1.3rem;
+  letter-spacing  : 3.2px;
+}
+
+.hide {
+  display: none;
+}
+
+@media(max-width:455px) {
+  .state-container {
+    margin : 0 20px;
+    padding: 2.3rem;
+  }
+}

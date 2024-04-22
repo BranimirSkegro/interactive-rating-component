@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <!-- Rating state start -->
+    <div class="state-container rating-state-container">
+      <div class="star-icon-container">
+        <img src="./images/icon-star.svg" alt="star-icon">
+      </div>
+      <div>
+        <h1>
+          How did we do?
+        </h1>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+      </div>
+      <div class="buttons-container">
+        <input id="1" type="text" name="one" value="1" readonly>
+        <input id="2" type="text" name="two" value="2" readonly>
+        <input id="3" type="text" name="three" value="3" readonly>
+        <input id="4" type="text" name="four" value="4" readonly>
+        <input id="5" type="text" name="five" value="5" readonly>
+
+      </div>
+      <button id="submit-btn" class="submit-btn" [disabled]>
+        Submit
+      </button>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="state-container thank-you-state-container hide">
+      <img width="35%" src="./images/illustration-thank-you.svg" alt="thank you image">
+      <p class="your-selection"></p>
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time to give a rating.If you ever need more support, don't hesitate to get in
+        touch!</p>
+    </div>
+
+    <!-- Thank you state end -->
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
